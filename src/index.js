@@ -4,12 +4,12 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import reducers from './reducers';
-// import Header from '../src/components/common/Header';
-// import Footer from '../src/components/common/Footer';
+import HeaderContent from '../src/components/common/HeaderContent';
+import FooterContent from '../src/components/common/FooterContent';
 import './index.css';
 import App from './App';
 import { Layout } from 'antd';
-import 'antd/dist/antd.css';
+//import 'antd/dist/antd.css';
 
 
 import * as serviceWorker from './serviceWorker';
@@ -21,10 +21,10 @@ const {
   
 ReactDOM.render(
     <Provider store={createStoreWithMiddleware(reducers)}>    
-        <Layout>
-            <Header>Header</Header>
-            <Content>Content</Content>
-            <Footer>Footer</Footer>
+        <Layout style={{ textAlign: 'center'}} className="ant-layout-custom">
+            <Header> <HeaderContent /> </Header>
+            <Content> <App /></Content>
+            <Footer> <FooterContent /></Footer>
         </Layout>
     </Provider>
     , document.getElementById('root'));

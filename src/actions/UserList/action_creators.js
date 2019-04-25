@@ -1,12 +1,11 @@
 import * as actionTypes from './action_types';
 import { createAction } from 'redux-actions';
-import adapter from './adapter';
 import { stubUserListData } from './stub';
 
 
 export const fetchUserList = () => dispatch => {
     dispatch(createAction(actionTypes.LOADING_USERLIST)());
-    fetch("https://localhost:3100/userDetails", { mode: 'no-cors' })
+    fetch("http://localhost:3100/userDetails", { mode: 'no-cors' })
         .then((resp) => resp)
         .then(function (data) {
             console.log('inside fetchBlocks stubUserListData.userList:', stubUserListData.userList);

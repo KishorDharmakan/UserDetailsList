@@ -1,22 +1,20 @@
 import React from "react";
 
-const Footer = props => {
+const FooterContent = props => {
   return (
-    <footer className="footer-style">
-      <p className="text-center">
-        <a href="mailto:alib@gmail.com" >
+    <div>
+        <a href="mailto:abcd@gmail.com" >
           Click for help?
         </a>
         <span> / </span>
         <a href="https://twitter.com/Tweet">
           Our Twitter Feed
         </a>
-      </p>
       <p className="copyright">
         &copy; 2019 - ABCD
       </p>
-    </footer>
+    </div>
   );
 };
 
-export default Footer;
+export default FooterContent;
